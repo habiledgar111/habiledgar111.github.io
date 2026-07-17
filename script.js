@@ -224,6 +224,17 @@ var City = function(data) {
   this.status = document.createElement('div');
   this.status.className = 'status';
   this.container.appendChild(this.status);
+
+  var cheatBtn = document.createElement('button');
+  cheatBtn.innerHTML = 'Add Cash';
+  cheatBtn.style.display = 'block'; 
+  cheatBtn.addEventListener('click', function() {
+    this.currency += 10000000000000000000000000;
+    this.update();
+  }.bind(this));
+  this.container.appendChild(cheatBtn);
+
+
   this.items = [];
   this.resident = new Zone(this, 'Residential', '&hearts;', data.resident);
   this.commerce = new Zone(this, 'Commercial', '&diams;', data.commerce);
