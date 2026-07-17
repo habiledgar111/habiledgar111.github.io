@@ -115,8 +115,7 @@ Zone.prototype.income = function(tax) {
 }
 
 Zone.prototype.price = function(size) {
-  return Math.floor(this.sizes[size].density *
-      Math.pow(1.1, this.sizes[size].amount));
+  return 0;
 };
 
 Zone.prototype.update = function() {
